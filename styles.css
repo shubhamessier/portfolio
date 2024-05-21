@@ -118,13 +118,27 @@ body[theme="dark"] {
 
 /* Main content styles */
 .about,
-.experience,
 .projects,
 .skills,
-.contact,
-.find-me {
+.contact {
+  padding: 3rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
+  position: relative;
+}
+
+.experience {
   padding: 3rem 0;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.experience-item {
+  flex: 1 1 50%;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -153,7 +167,7 @@ a {
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   padding-bottom: 0.2rem;
   font-weight: 600;
   color: black;
@@ -167,14 +181,14 @@ h2 {
   color: #333;
   font-family: "Albert Sans";
   margin-bottom: 0.3rem;
-  margin-top: 0.3rem;
+  margin-top: 2rem;
 }
 
 .Role {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   padding: 0.01rem;
-  color: #333;
+  color: #3d3d3d;
   font-family: "Albert Sans";
 }
 
@@ -182,7 +196,6 @@ p {
   font-size: 1rem;
   line-height: 1.6;
   padding: 7px 0;
-  /* margin: 3px; */
 }
 
 ul {
@@ -295,17 +308,11 @@ ul {
   }
 }
 
-/* 
-gallery  */
-
-.img-container {
-  width: 43%;
-  margin: 0 auto;
-  position: center;
-}
-
+/* Gallery styles */
 .gallery {
   padding: 2rem 0;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .gallery-grid {
@@ -326,4 +333,16 @@ gallery  */
   display: block;
   border-radius: 8px;
   object-fit: fill;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%;
+  }
 }
