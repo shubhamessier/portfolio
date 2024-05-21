@@ -161,18 +161,27 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
-h3 {
+.Company-Name {
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #333;
   font-family: "Albert Sans";
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.Role {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.01rem;
+  color: #333;
+  font-family: "Albert Sans";
 }
 
 p {
   font-size: 1rem;
   line-height: 1.6;
-  padding: 4px 0;
+  padding: 7px 0;
   /* margin: 3px; */
 }
 
