@@ -283,3 +283,17 @@ ul {
   padding-right: clamp(1px, 0.2vw, 3px);
   padding-top: clamp(1px, 0.2vw, 3px);
 }
+
+/* .section-paragraph {
+  transform: translateY(10px);
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  line-height: 1.6;
+  padding: clamp(5px, 0.7vw, 10px) 0;
+  transition: 1s ease;
+  opacity: 0;
+}
+
+.section-paragraph--visible {
+  transform: translateY(10px);
+  opacity: 1;
+} */
