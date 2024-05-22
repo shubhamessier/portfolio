@@ -5,6 +5,40 @@
   box-sizing: border-box;
 }
 
+.gallery {
+  padding: clamp(10px, 2vw, 30px) 0;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: clamp(5px, 1vw, 15px);
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: clamp(200px, 30vw, 350px);
+  margin: clamp(5px, 1vw, 15px);
+  border-radius: clamp(4px, 0.8vw, 12px);
+  overflow: hidden;
+  box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(clamp(-3px, -0.5vw, -7px));
+  box-shadow: 0 clamp(4px, 0.8vw, 12px) clamp(6px, 1.2vw, 18px)
+    rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: clamp(4px, 0.8vw, 12px);
+}
+
 /* Global styles */
 body {
   font-family: "SF Pro Display", sans-serif;
@@ -29,9 +63,9 @@ body[theme="dark"] {
 }
 
 .container {
-  max-width: 690px;
+  max-width: clamp(400px, 70vw, 800px);
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 3rem);
   text-align: left;
   position: relative;
   z-index: 1;
@@ -39,14 +73,14 @@ body[theme="dark"] {
 
 /* Navbar styles */
 .header {
-  padding: 1rem 0;
+  padding: clamp(0.5rem, 1vw, 1.5rem) 0;
   position: relative;
   z-index: 2;
 }
 
 .navbar {
   display: flex;
-  padding-top: 15px;
+  padding-top: clamp(10px, 1.5vw, 20px);
   justify-content: space-between;
   align-items: center;
 }
@@ -59,8 +93,8 @@ body[theme="dark"] {
 }
 
 .navbar-brand {
-  font-size: 1.1rem;
-  font-weight: 700px;
+  font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+  font-weight: 600px;
   position: left;
   text-decoration: none;
   color: inherit;
@@ -71,13 +105,13 @@ body[theme="dark"] {
 }
 
 .nav-item {
-  margin: 0 0.75rem;
+  margin: 0 clamp(0.5rem, 0.75vw, 1rem);
 }
 
 .nav-link {
   text-decoration: none;
   color: inherit;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
   transition: color 0.3s ease;
 
   &:hover,
@@ -120,8 +154,8 @@ body[theme="dark"] {
 .projects,
 .skills,
 .contact {
-  margin-top: 1rem;
-  margin-bottom: 1.3rem;
+  margin-top: clamp(1rem, 1.3vw, 1.5rem);
+  margin-bottom: clamp(1.1rem, 1.4vw, 1.6rem);
   position: relative;
 }
 
@@ -134,8 +168,8 @@ body[theme="dark"] {
 
 .experience-item {
   flex: 1 1 50%;
-  padding-right: 2rem;
-  margin-bottom: 2rem;
+  padding-right: clamp(1rem, 2vw, 3rem);
+  margin-bottom: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 a {
@@ -159,48 +193,48 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(197, 181, 181, 0.5);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(clamp(10px, 2vw, 30px));
   z-index: -1;
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: clamp(1.4rem, 1.7vw, 2rem);
   font-weight: 600;
   color: black;
   font-family: "Albert Sans";
-  margin-top: 1.5rem;
-  margin-bottom: 1.3rem;
+  margin-top: clamp(1.2rem, 1.5vw, 1.8rem);
+  margin-bottom: clamp(1.1rem, 1.3vw, 1.5rem);
 }
 
 .Company-Name {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1.3vw, 1.5rem);
   font-weight: 600;
   color: #333;
   font-family: "Albert Sans";
-  margin-bottom: 0.3rem;
-  margin-top: 2rem;
+  margin-bottom: clamp(0.2rem, 0.3vw, 0.4rem);
+  margin-top: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .Role {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
   font-weight: 400;
-  padding: 0.01rem;
+  padding: clamp(0.01rem, 0.01vw, 0.02rem);
   color: #3d3d3d;
   font-family: "Albert Sans";
 }
 
 p {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
   line-height: 1.6;
-  padding: 7px 0;
+  padding: clamp(5px, 0.7vw, 10px) 0;
 }
 
 ul {
   list-style-type: none;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 
   li {
-    margin-bottom: 0.75rem;
+    margin-bottom: clamp(0.5rem, 0.75vw, 1rem);
   }
 }
 
@@ -221,10 +255,10 @@ ul {
 
 /* Skills section styles */
 .skills-logo {
-  height: 50px;
-  margin: 0 1rem;
+  height: clamp(40px, 5vw, 60px);
+  margin: 0 clamp(0.5rem, 1vw, 1.5rem);
   margin-left: 0px;
-  margin-bottom: 0.8rem;
+  margin-bottom: clamp(0.6rem, 0.8vw, 1rem);
   filter: grayscale(100%);
   position: center;
 }
@@ -232,78 +266,11 @@ ul {
 .footer {
   background-color: #ffffff;
   color: #333;
-  padding: 1rem 0;
+  padding: clamp(0.5rem, 1vw, 1.5rem) 0;
   text-align: center;
-  font-size: 0rem;
+  font-size: clamp(0rem, 0.1vw, 0.2rem);
   position: relative;
   z-index: 2;
-
-  .light-theme & {
-    background-color: #ffffff;
-    color: #333;
-  }
-}
-
-#hybrid,
-#theme-toggle {
-  visibility: hidden;
-}
-
-#theme-toggle + label {
-  content: "";
-  display: inline-block;
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-
-  &:not(:checked) {
-    background-color: gold;
-  }
-
-  &:checked {
-    background-color: transparent;
-    box-shadow: inset -10px -10px 1px 1px #fff;
-  }
-}
-
-/* Image grid styles */
-.img-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  max-height: 400px;
-  gap: 10px;
-  width: 100%;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
-
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-
-  img {
-    max-width: 650px;
-    width: 100%;
-    border-radius: 10px;
-    height: auto;
-    position: left;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.02);
-
-    img {
-      transform: scale(1.05);
-    }
-  }
 }
 
 .mail {
@@ -312,133 +279,7 @@ ul {
 }
 
 .socials {
-  padding-left: 4px;
-  padding-right: 2px;
-  padding-top: 2px;
+  padding-left: clamp(2px, 0.4vw, 6px);
+  padding-right: clamp(1px, 0.2vw, 3px);
+  padding-top: clamp(1px, 0.2vw, 3px);
 }
-
-/* Gallery styles */
-.gallery {
-  padding: 0;
-  max-width: 650px;
-
-  margin: 1rem auto;
-}
-
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.gallery-item {
-  flex: 1 1 calc(33.333% - 1rem);
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  object-fit: fill;
-}
-
-@media (max-width: 767px) {
-  .img-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-}
-
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.02);
-
-    img {
-      transform: scale(1.05);
-    }
-  }
-}
-
-/* Gallery styles */
-.gallery {
-  padding: 0;
-  max-width: 650px;
-  margin: 1rem auto;
-}
-
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* She eyes me like a Pisces when I am weak
-I've been locked inside your heart-shaped box for weeks
-I've been drawn into your magnet tar pit trap
-I wish I could eat your cancer when you turn black
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Your advice
-Meat-eating orchids forgive no one just yet
-Cut myself on angel hair and baby's breath
-Broken hymen of Your Highness, I'm left black
-Throw down your umbilical noose so I can climb right back
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Your advice
-She eyes me like a Pisces when I am weak
-I've been locked inside your heart-shaped box for weeks
-I've been drawn into your magnet tar pit trap
-I wish I could eat your cancer when you turn black
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Hey
-Wait
-I got a new complaint
-Forever in debt to your priceless advice
-Your advice
-Your advice
-Your advice */
