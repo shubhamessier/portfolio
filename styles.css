@@ -318,8 +318,24 @@ ul li {
   backdrop-filter: opacity(2);
 }
 
-.socials {
-  padding-left: clamp(2px, 0.4vw, 6px);
-  padding-right: clamp(1px, 0.2vw, 3px);
-  padding-top: clamp(1px, 0.2vw, 3px);
+.social-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #666;
+  transition: width 0.3s ease;
+}
+
+.social-link:hover:before {
+  width: 100%;
 }
