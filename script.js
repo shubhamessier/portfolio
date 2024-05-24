@@ -1,4 +1,4 @@
-const paragraphElements = document.querySelectorAll("p");
+const paragraphElements = document.querySelectorAll("p", "li");
 
 const observer = new IntersectionObserver(
   (entries) => {

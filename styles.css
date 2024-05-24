@@ -236,7 +236,8 @@ h2 {
   color: #666;
 }
 
-.Role {
+.Role,
+.books {
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   font-weight: 400;
   padding: clamp(0.01rem, 0.01vw, 0.02rem);
