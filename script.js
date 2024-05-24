@@ -1,17 +1,19 @@
-const paragraphs = document.querySelectorAll(".section_paragraph");
+const paragraphElements = document.querySelectorAll("p");
 
-document.addEventListener("scroll", function () {
-  paragraphs.forEach((paragraph) => {
-    if (isInView(paragraph)) {
-      paragraph.classList.add("section_paragraph--visible");
-    }
-  });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("paragraph-visible");
+      }
+    });
+  },
+  {
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger the animation when the element is 50% visible
+  }
+);
+
+paragraphElements.forEach((paragraph) => {
+  observer.observe(paragraph);
 });
-
-function isInView(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.bottom > 0 &&
-    rect.top < (window.innerHeight - 150 || document.documentElement.clientHeight - 150)
-  );
-}

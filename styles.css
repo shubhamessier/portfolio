@@ -23,7 +23,7 @@
   border-radius: clamp(4px, 0.8vw, 12px);
   overflow: hidden;
   box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
@@ -37,6 +37,11 @@
   height: auto;
   object-fit: contain;
   border-radius: clamp(4px, 0.8vw, 12px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 /* Global styles */
@@ -98,6 +103,11 @@ body[theme="dark"] {
   position: left;
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #666;
 }
 
 .navbar-nav {
@@ -113,15 +123,15 @@ body[theme="dark"] {
   color: inherit;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   transition: color 0.3s ease;
+}
 
-  &:hover,
-  &:focus {
-    color: #666;
-  }
+.nav-link:hover,
+.nav-link:focus {
+  color: #666;
+}
 
-  &:visited {
-    color: inherit;
-  }
+.nav-link:visited {
+  color: inherit;
 }
 
 .theme-toggle {
@@ -130,6 +140,11 @@ body[theme="dark"] {
   color: inherit;
   cursor: pointer;
   height: 100%;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #666;
 }
 
 .theme-icon {
@@ -138,10 +153,10 @@ body[theme="dark"] {
   height: 100%;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
 
-  &.visible {
-    opacity: 1;
-  }
+.theme-icon.visible {
+  opacity: 1;
 }
 
 .light-theme .theme-icon:first-child,
@@ -175,15 +190,16 @@ body[theme="dark"] {
 a {
   color: #333;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  &:hover,
-  &:focus {
-    color: #666;
-  }
+a:hover,
+a:focus {
+  color: #666;
+}
 
-  &:visited {
-    color: inherit;
-  }
+a:visited {
+  color: inherit;
 }
 
 .blur-backdrop {
@@ -213,6 +229,11 @@ h2 {
   font-family: "Albert Sans";
   margin-bottom: clamp(0.2rem, 0.3vw, 0.4rem);
   margin-top: clamp(1.5rem, 2vw, 2.5rem);
+  transition: color 0.3s ease;
+}
+
+.Company-Name:hover {
+  color: #666;
 }
 
 .Role {
@@ -227,30 +248,43 @@ p {
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   line-height: 1.6;
   padding: clamp(5px, 0.7vw, 10px) 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 ul {
   list-style-type: none;
   font-size: clamp(0.8rem, 1vw, 1.2rem);
+}
 
-  li {
-    margin-bottom: clamp(0.5rem, 0.75vw, 1rem);
-  }
+ul li {
+  margin-bottom: clamp(0.5rem, 0.75vw, 1rem);
 }
 
 .social-link {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+}
 
-  &:hover,
-  &:focus {
-    color: #666;
-  }
+.social-link:hover,
+.social-link:focus {
+  color: #666;
+}
 
-  &:visited {
-    color: inherit;
-  }
+.social-link:visited {
+  color: inherit;
 }
 
 /* Skills section styles */
@@ -261,6 +295,11 @@ ul {
   margin-bottom: clamp(0.6rem, 0.8vw, 1rem);
   filter: grayscale(100%);
   position: center;
+  transition: filter 0.3s ease;
+}
+
+.skills-logo:hover {
+  filter: grayscale(0%);
 }
 
 .footer {
@@ -283,17 +322,3 @@ ul {
   padding-right: clamp(1px, 0.2vw, 3px);
   padding-top: clamp(1px, 0.2vw, 3px);
 }
-
-/* .section-paragraph {
-  transform: translateY(10px);
-  font-size: clamp(0.8rem, 1vw, 1.2rem);
-  line-height: 1.6;
-  padding: clamp(5px, 0.7vw, 10px) 0;
-  transition: 1s ease;
-  opacity: 0;
-}
-
-.section-paragraph--visible {
-  transform: translateY(10px);
-  opacity: 1;
-} */
