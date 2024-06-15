@@ -91,7 +91,7 @@ body[theme="dark"] {
 }
 
 .container {
-  max-width: clamp(400px, 70vw, 800px);
+  max-width: clamp(400px, 70vw, 600px);
   margin: 0 auto;
   padding: clamp(1rem, 2vw, 3rem);
   text-align: left;
