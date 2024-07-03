@@ -8,7 +8,7 @@
 }
 
 .gallery {
-  padding: clamp(10px, 2vw, 30px) 0;
+  padding: clamp(10px, 2vw, 20px) 0;
   position: relative;
 }
 
@@ -16,13 +16,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: clamp(5px, 1vw, 15px);
+  margin: clamp(5px, 1vw, 10px);
 }
 
 .gallery-item {
   flex: 0 0 auto;
   width: clamp(200px, 30vw, 350px);
-  margin: clamp(5px, 1vw, 15px);
+  margin: clamp(5px, 1vw, 12px);
   border-radius: clamp(4px, 0.8vw, 12px);
   overflow: hidden;
   box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
@@ -93,7 +93,7 @@ body[theme="dark"] {
 .container {
   max-width: clamp(400px, 70vw, 600px);
   margin: 0 auto;
-  padding: clamp(0.5rem, 2vw, 1.2rem);
+  padding: clamp(0.5rem, 1.5vw, 1rem);
   text-align: left;
   position: relative;
   z-index: 1;
@@ -303,8 +303,8 @@ ul li:hover {
 
 /* Skills section styles */
 .skills-logo {
-  height: clamp(40px, 5vw, 60px);
-  margin: 0 clamp(0.5rem, 1vw, 1.5rem);
+  height: clamp(20px, 3vw, 40px);
+  margin: 0 clamp(0.3rem, 1vw, 1rem);
   margin-left: 0px;
   margin-bottom: clamp(0.6rem, 0.8vw, 1rem);
   filter: grayscale(100%);
@@ -369,7 +369,7 @@ ul li:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: clamp(10px, 1vw, 20px);
-  margin-bottom: clamp(10px, 1.5vw, 30px);
+  margin-bottom: clamp(10px, 1.5vw, 25px);
 }
 
 .collage-item {
