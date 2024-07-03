@@ -385,3 +385,17 @@ ul li:hover {
   box-shadow: 0 clamp(4px, 0.8vw, 12px) clamp(6px, 1.2vw, 18px)
     rgba(0, 0, 0, 0.15);
 }
+
+@keyframes smooth-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.smooth-blinking-text {
+  animation: smooth-blink 2s infinite ease-in-out;
+}
