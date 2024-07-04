@@ -91,7 +91,7 @@ body[theme="dark"] {
 }
 
 .container {
-  max-width: clamp(400px, 70vw, 600px);
+  max-width: clamp(400px, 70vw, 560px);
   margin: 0 auto;
   padding: clamp(0.5rem, 1.5vw, 1rem);
   text-align: left;
@@ -398,4 +398,12 @@ ul li:hover {
 
 .smooth-blinking-text {
   animation: smooth-blink 2s infinite ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .skills-logo {
+    height: clamp(27px, 3.9vw, 50px);
+    margin: 0 clamp(0.2rem, 0.8vw, 0.8rem);
+    margin-bottom: clamp(0.5rem, 0.7vw, 0.9rem);
+  }
 }
