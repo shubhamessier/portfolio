@@ -402,8 +402,8 @@ ul li:hover {
 
 @media (max-width: 768px) {
   .skills-logo {
-    height: clamp(30px, 3.9vw, 60px);
-    margin: 0 clamp(0.4rem, 0.9vw, 1rem);
+    height: clamp(35px, 4.1vw, 65px);
+    margin: 0 clamp(0.4rem, 0.7vw, 0.8rem);
     margin-bottom: clamp(0.5rem, 0.7vw, 0.9rem);
   }
 }
