@@ -16,13 +16,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: clamp(5px, 1vw, 10px);
+  margin: clamp(2px, 1vw, 4px);
 }
 
 .gallery-item {
   flex: 0 0 auto;
-  width: clamp(200px, 30vw, 350px);
-  margin: clamp(5px, 1vw, 12px);
+  width: clamp(150px, 30vw, 200px);
+  margin: clamp(3px, 1vw, 12px);
   border-radius: clamp(4px, 0.8vw, 12px);
   overflow: hidden;
   box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
