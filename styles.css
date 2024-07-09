@@ -6,7 +6,7 @@
 }
 
 .gallery {
-  padding: clamp(10px, 2vw, 20px) 0;
+  padding: clamp(7px, 1.5vw, 15px) 0;
   position: relative;
 }
 
@@ -20,7 +20,7 @@
 .gallery-item {
   flex: 0 0 auto;
   width: clamp(150px, 30vw, 200px);
-  margin: clamp(3px, 1vw, 12px);
+  margin: clamp(3px, 1vw, 8px);
   border-radius: clamp(4px, 0.8vw, 12px);
   overflow: hidden;
   box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
