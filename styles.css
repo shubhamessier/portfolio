@@ -293,6 +293,8 @@ ul {
 ul li {
   margin-bottom: clamp(0.5rem, 0.75vw, 1rem);
   transition: color 0.3s ease;
+
+  
 }
 
 ul li:hover {
