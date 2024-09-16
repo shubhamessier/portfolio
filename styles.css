@@ -28,6 +28,18 @@
   position: relative;
 }
 
+.gallery-item-big {
+  flex: 0 0 auto;
+  margin: 4.5%;
+  width: clamp(50px, 30vw, 460px);
+  border-radius: clamp(4px, 0.8vw, 12px);
+
+  object-fit: cover;
+  box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  justify-content: center;
+}
+
 .gallery-item:hover {
   box-shadow: 0 clamp(4px, 0.8vw, 12px) clamp(6px, 1.2vw, 18px)
     rgba(0, 0, 0, 0.15);
@@ -293,8 +305,6 @@ ul {
 ul li {
   margin-bottom: clamp(0.5rem, 0.75vw, 1rem);
   transition: color 0.3s ease;
-
-  
 }
 
 ul li:hover {
