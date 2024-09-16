@@ -30,8 +30,8 @@
 
 .gallery-item-big {
   flex: 0 0 auto;
-  margin: 4.2%;
-  width: 30rem; /* You can adjust this value */
+  margin: 4.5%;
+  width: 25rem; /* You can adjust this value */
   max-width: 28.75rem; /* Equivalent to 460px (assuming 1rem = 16px) */
   min-width: 3.125rem; /* Equivalent to 50px */
 
@@ -415,7 +415,7 @@ ul li:hover {
 @media (max-width: 768px) {
   .gallery-item-big {
     flex: 0 0 auto;
-    margin: 4.2%;
+    margin: 4.5%;
     width: 18rem; /* You can adjust this value */
     max-width: 28.75rem; /* Equivalent to 460px (assuming 1rem = 16px) */
     min-width: 3.125rem; /* Equivalent to 50px */
