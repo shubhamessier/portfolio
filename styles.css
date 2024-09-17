@@ -416,10 +416,9 @@ ul li:hover {
   .gallery-item-big {
     flex: 0 0 auto;
     margin: 4.5%;
-    margin-left: 2%;
     width: 18rem; /* You can adjust this value */
-    max-width: 28.75rem; /* Equivalent to 460px (assuming 1rem = 16px) */
-    min-width: 3.125rem; /* Equivalent to 50px */
+    max-width: 30.75rem; /* Equivalent to 460px (assuming 1rem = 16px) */
+    min-width: 5.125rem; /* Equivalent to 50px */
 
     border-radius: 0.75rem; /* Equivalent to 12px */
     object-fit: cover;
