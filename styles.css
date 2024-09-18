@@ -26,7 +26,6 @@
   box-shadow: 0 clamp(2px, 0.4vw, 6px) clamp(3px, 0.6vw, 9px) rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   position: relative;
-margin-left: 11%;
 }
 
 .gallery-item-big {
