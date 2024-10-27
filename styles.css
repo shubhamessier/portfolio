@@ -1,4 +1,5 @@
 /* Reset styles */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playwrite+AR&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,7 @@
   min-width: 3.125rem;
   border-radius: 0rem;
   object-fit: cover;
-  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); */
   transition: box-shadow 0.3s ease;
   justify-content: center;
 }
@@ -101,7 +102,7 @@ body[theme="dark"] {
 }
 
 .container {
-  max-width: clamp(400px, 70vw, 560px);
+  max-width: clamp(550px, 70vw, 750px);
   margin: 0 auto;
   padding: clamp(0.5rem, 1.5vw, 1rem);
   text-align: left;
@@ -239,7 +240,7 @@ h2 {
   font-size: clamp(1.4rem, 1.7vw, 2rem);
   font-weight: 600;
   color: black;
-  font-family: "Albert Sans";
+  font-family: "DM Sans";
   margin-top: clamp(0.8rem, 1vw, 1.1rem);
   margin-bottom: clamp(0.7rem, 1vw, 1rem);
   transition: color 0.3s ease;
@@ -253,7 +254,7 @@ h2:hover {
   font-size: clamp(1.1rem, 1.3vw, 1.5rem);
   font-weight: 600;
   color: #333;
-  font-family: "Albert Sans";
+  font-family: "DM Sans";
   margin-bottom: clamp(0.2rem, 0.3vw, 0.4rem);
   margin-top: clamp(1.5rem, 2vw, 2.5rem);
   transition: color 0.3s ease;
@@ -269,7 +270,7 @@ h2:hover {
   font-weight: 400;
   padding: clamp(0.01rem, 0.01vw, 0.02rem);
   color: #3d3d3d;
-  font-family: "Albert Sans";
+  font-family: "DM Sans";
   transition: color 0.3s ease;
 }
 
