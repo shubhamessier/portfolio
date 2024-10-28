@@ -8,11 +8,13 @@
 
 .gallery {
   padding: clamp(7px, 1.5vw, 15px) 0;
+
   position: relative;
 }
 
 .gallery-grid {
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
   margin: clamp(2px, 1vw, 4px);
@@ -132,7 +134,7 @@ body[theme="dark"] {
 }
 
 .navbar-brand {
-  font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
   font-weight: 600px;
   position: left;
   text-decoration: none;
@@ -155,7 +157,7 @@ body[theme="dark"] {
 .nav-link {
   text-decoration: none;
   color: inherit;
-  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  font-size: clamp(0.9rem, 1vw, 1.3rem);
   transition: color 0.3s ease;
 }
 
@@ -412,6 +414,14 @@ ul li:hover {
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: clamp(500px, 70vw, 600px);
+    margin-left: 7px;
+    padding: clamp(0.5rem, 1.5vw, 1rem);
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
   .gallery-item-big {
     display: grid;
     width: 19.5rem;
