@@ -7,7 +7,9 @@
 }
 
 .gallery {
-  padding: clamp(7px, 1.5vw, 15px) 0;
+  padding: clamp(5px, 1.5vw, 15px) 0;
+
+  margin: 0 auto;
 
   position: relative;
 }
@@ -17,7 +19,14 @@
 
   flex-wrap: wrap;
   justify-content: center;
-  margin: clamp(2px, 1vw, 4px);
+  margin: auto auto
+}
+
+.tape{
+  max-width: 130px;
+  position: absolute;
+  right: 13.9%;
+  z-index: 15;
 }
 
 .gallery-item {
@@ -31,10 +40,11 @@
 }
 
 .gallery-item-big {
-  margin: 7% auto;
-  width: 25rem;
+  margin: 6% 6.9%;
+  width: 32.5rem;
+  height: 17rem;
   display: grid;
-  max-width: 28.75rem;
+  max-width: 38.75rem;
   min-width: 3.125rem;
   border-radius: 0rem;
   object-fit: cover;
@@ -80,6 +90,25 @@
   transform: scale(1.1);
 }
 
+
+.gallery-item-cautionary {
+  height: 12rem;
+  margin: 3.5% auto;
+  margin-bottom: -3%;
+  display: flex;            /* Use flexbox */
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+  border-radius: 0.5rem;  /* Keep if needed */
+  overflow: hidden;       /* Hide any content that overflows */ /* Added this */ 
+}
+
+.gallery-item-cautionary img {  /* Target the image inside */
+  display: block;          /* Prevent extra spacing */
+  max-width: 100%;         /* Ensure image fits within container width */
+  max-height: 100%;        /* Ensure image fits within container height */
+  object-fit: contain;    /* Show full image, maintain aspect ratio */ /* changed this */
+}
+
 /* Global styles */
 body {
   font-family: "SF Pro Display", sans-serif;
@@ -104,7 +133,7 @@ body[theme="dark"] {
 }
 
 .container {
-  max-width: clamp(550px, 70vw, 750px);
+  max-width: clamp(600px, 70vw, 750px);
   margin: 0 auto;
   padding: clamp(0.5rem, 1.5vw, 1rem);
   text-align: left;
@@ -134,7 +163,7 @@ body[theme="dark"] {
 }
 
 .navbar-brand {
-  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.4rem);
   font-weight: 600px;
   position: left;
   text-decoration: none;
@@ -414,6 +443,34 @@ ul li:hover {
 }
 
 @media (max-width: 768px) {
+
+  .tape {
+    max-width: clamp(80px, 5vw + 30px, 100px); /* Scales width between 60px and 90px based on viewport */
+    position: absolute;
+    right: 6.9%;
+    z-index: 15;
+}
+
+
+  .gallery-item-cautionary {
+    width: 21.5rem;
+    height: 12rem;
+    margin: 3.5% auto;
+    margin-bottom: -3%;
+    display: flex;            /* Use flexbox */
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    border-radius: 0.5rem;  /* Keep if needed */
+    overflow: hidden;       /* Hide any content that overflows */ /* Added this */ 
+  }
+  
+  .gallery-item-cautionary img {  /* Target the image inside */
+    display: block;          /* Prevent extra spacing */
+    max-width: 100%;         /* Ensure image fits within container width */
+    max-height: 100%;        /* Ensure image fits within container height */
+    object-fit: contain;    /* Show full image, maintain aspect ratio */ /* changed this */
+  }
+
   .container {
     max-width: clamp(500px, 70vw, 600px);
     margin-left: 7px;
@@ -424,8 +481,9 @@ ul li:hover {
   }
   .gallery-item-big {
     display: grid;
-    width: 19.5rem;
-    margin: 7% 7.5%;
+    width: 20.5rem;
+    height: 13rem;
+    margin: 7% 6.6%;
     max-width: 25.75rem;
     border-radius: 0.5rem;
     min-width: 3.125rem;
