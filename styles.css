@@ -19,11 +19,12 @@
 
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto auto
+  margin: auto auto;
+  margin-left: -6%;
 }
 
-.tape{
-  max-width: 130px;
+.tape-left{
+  max-width: 110px;
   position: absolute;
   right: 13.9%;
   z-index: 15;
@@ -40,7 +41,7 @@
 }
 
 .gallery-item-big {
-  margin: 6% 6.9%;
+  margin: 6% 9.9%;
   width: 32.5rem;
   height: 17rem;
   display: grid;
@@ -95,17 +96,19 @@
   height: 12rem;
   margin: 3.5% auto;
   margin-bottom: -3%;
-  display: flex;            /* Use flexbox */
+  display: flex;     
+  pointer-events: none;       /* Use flexbox */
   justify-content: center; /* Horizontal centering */
   align-items: center;     /* Vertical centering */
-  border-radius: 0.5rem;  /* Keep if needed */
+    /* Keep if needed */
   overflow: hidden;       /* Hide any content that overflows */ /* Added this */ 
 }
 
 .gallery-item-cautionary img {  /* Target the image inside */
   display: block;          /* Prevent extra spacing */
   max-width: 100%;         /* Ensure image fits within container width */
-  max-height: 100%;        /* Ensure image fits within container height */
+  max-height: 100%;   
+  pointer-events: none;     /* Ensure image fits within container height */
   object-fit: contain;    /* Show full image, maintain aspect ratio */ /* changed this */
 }
 
@@ -239,12 +242,12 @@ body[theme="dark"] {
   position: relative;
 }
 
-.experience {
+/* .experience {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+} */
 
 .experience-item {
   flex: 1 1 50%;
@@ -268,8 +271,9 @@ a:visited {
 }
 
 h2 {
-  font-size: clamp(1.4rem, 1.7vw, 2rem);
-  font-weight: 600;
+  font-size: clamp(1.6rem, 1.7vw, 2.2rem);
+  letter-spacing: -1.3px;
+  font-weight: 550;
   color: black;
   font-family: "DM Sans";
   margin-top: clamp(0.8rem, 1vw, 1.1rem);
@@ -313,6 +317,8 @@ h2:hover {
 p {
   font-size: clamp(0.8rem, 1vw, 1.2rem);
   line-height: 1.6;
+  max-width: clamp(600px, 70vw, 650px);
+  ;
   padding: clamp(5px, 0.7vw, 10px) 0;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -376,6 +382,7 @@ ul li:hover {
 
 .mail {
   font-family: monospace;
+
   backdrop-filter: opacity(2);
 }
 
@@ -444,18 +451,19 @@ ul li:hover {
 
 @media (max-width: 768px) {
 
-  .tape {
+  .tape-left {
     max-width: clamp(80px, 5vw + 30px, 100px); /* Scales width between 60px and 90px based on viewport */
     position: absolute;
+    pointer-events: none;
     right: 6.9%;
     z-index: 15;
 }
 
-
   .gallery-item-cautionary {
     width: 21.5rem;
     height: 12rem;
-    margin: 3.5% auto;
+    margin: 3.1% auto;
+    margin-left: 3.9%;
     margin-bottom: -3%;
     display: flex;            /* Use flexbox */
     justify-content: center; /* Horizontal centering */
@@ -496,5 +504,13 @@ ul li:hover {
     height: clamp(35px, 4.1vw, 65px);
     margin: 0 clamp(0.4rem, 0.7vw, 0.8rem);
     margin-bottom: clamp(0.5rem, 0.7vw, 0.9rem);
+  }
+
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto auto;
+    margin-left: -2%;
   }
 }
