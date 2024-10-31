@@ -138,6 +138,7 @@ body[theme="dark"] {
 .container {
   max-width: clamp(600px, 70vw, 750px);
   margin: 0 auto;
+  margin-top: 2%;
   padding: clamp(0.5rem, 1.5vw, 1rem);
   text-align: left;
   position: relative;
@@ -153,7 +154,7 @@ body[theme="dark"] {
 
 .navbar {
   display: flex;
-  padding-top: clamp(10px, 1.5vw, 20px);
+  padding-top: clamp(10px, 1.5vw, 14px);
   justify-content: space-between;
   align-items: center;
 }
@@ -242,12 +243,7 @@ body[theme="dark"] {
   position: relative;
 }
 
-/* .experience {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
+
 
 .experience-item {
   flex: 1 1 50%;
@@ -271,9 +267,9 @@ a:visited {
 }
 
 h2 {
-  font-size: clamp(1.6rem, 1.7vw, 2.2rem);
+  font-size: clamp(1.4rem, 1.7vw, 2rem);
   letter-spacing: -1.3px;
-  font-weight: 550;
+  font-weight: 600;
   color: black;
   font-family: "DM Sans";
   margin-top: clamp(0.8rem, 1vw, 1.1rem);
@@ -451,6 +447,11 @@ ul li:hover {
 
 @media (max-width: 768px) {
 
+
+  .experience {
+    margin-top: 5%;
+  }
+
   .tape-left {
     max-width: clamp(80px, 5vw + 30px, 100px); /* Scales width between 60px and 90px based on viewport */
     position: absolute;
@@ -489,9 +490,9 @@ ul li:hover {
   }
   .gallery-item-big {
     display: grid;
-    width: 20.5rem;
-    height: 13rem;
-    margin: 7% 6.6%;
+    width: 21.5rem;
+    height: 12.5rem;
+    margin: 7% 5%;
     max-width: 25.75rem;
     border-radius: 0.5rem;
     min-width: 3.125rem;
@@ -511,6 +512,6 @@ ul li:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto auto;
-    margin-left: -2%;
+    margin-left: -5%;
   }
 }
